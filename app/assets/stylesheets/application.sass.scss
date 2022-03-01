@@ -1,10 +1,12 @@
 @import "config/variable";
+@import "config/animations";
 @import "config/reset";
 
 @import "mixins/media";
 
 @import "components/btn";
 @import "components/error_message";
+@import "components/flash";
 @import "components/form";
 @import "components/navbar";
 @import "components/quote";
