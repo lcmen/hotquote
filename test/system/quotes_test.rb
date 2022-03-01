@@ -1,7 +1,10 @@
 require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
+  include Devise::Test::IntegrationHelpers
+
   setup do
+    sign_in(users(:accountant))
     @quote = Quote.ordered.first
   end
 
