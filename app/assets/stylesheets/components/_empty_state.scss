@@ -1,0 +1,18 @@
+.empty-state {
+  display: none;
+  padding: var(--space-m);
+  border: var(--border);
+  border-style: dashed;
+  text-align: center;
+
+  &:only-child {
+    display: revert;
+  }
+
+  &__text {
+    font-size: var(--font-size-l);
+    color: var(--color-text-header);
+    margin-bottom: var(--space-l);
+    font-weight: bold;
+  }
+}
