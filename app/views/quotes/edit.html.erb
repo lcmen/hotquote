@@ -5,7 +5,7 @@
     <h1>Edit quote</h1>
   </div>
 
-  <%= turbo_frame_tag @quote do %>
+  <div id="<%= dom_id(@quote) %>" updated="<%= Time.current %>" up-keep>
     <%= render "form", quote: @quote %>
-  <% end %>
+  </div>
 </main>

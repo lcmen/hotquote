@@ -12,8 +12,8 @@ gem "simple_form"
 gem "cssbundling-rails"
 gem "jsbundling-rails"
 gem "sprockets-rails"
-gem "turbo-rails"
 gem "stimulus-rails"
+gem "unpoly-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

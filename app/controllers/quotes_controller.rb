@@ -15,10 +15,7 @@ class QuotesController < ApplicationController
   def create
     @quote = current_company.quotes.build(quote_params)
     if @quote.save
-      respond_to do |format|
-        format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
-        format.turbo_stream { flash.now[:notice] = "Quote was successfully created." }
-      end
+      redirect_to quotes_path, notice: "Quote was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,10 +26,8 @@ class QuotesController < ApplicationController
 
   def update
     if @quote.update(quote_params)
-      respond_to do |format|
-        format.html { redirect_to quotes_path, notice: "Quote was successfully updated." }
-        format.turbo_stream { flash.now[:notice] = "Quote was successfully updated." }
-      end
+      up.title = 'Updated'
+      redirect_to quotes_path, notice: "Quote was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -41,10 +36,7 @@ class QuotesController < ApplicationController
   def destroy
     @quote.destroy
 
-    respond_to do |format|
-      format.html { redirect_to quotes_path, notice: "Quote was successfully deleted." }
-      format.turbo_stream { flash.now[:notice] = "Quote was successfully deleted." }
-    end
+    redirect_to quotes_path, notice: "Quote was successfully deleted."
   end
 
   private

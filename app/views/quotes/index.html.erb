@@ -1,15 +1,16 @@
-<%= turbo_stream_from current_company, "quotes" %>
-
 <main class="container">
   <div class="header">
     <h1>Quotes</h1>
-    <%= link_to "New quote", new_quote_path, class: "btn btn--primary", data: { turbo_frame: dom_id(Quote.new) } %>
+    <%= link_to "New quote",
+        new_quote_path,
+        class: "btn btn--primary",
+        "up-target" => "##{dom_id(Quote.new)}" %>
   </div>
 
-  <%= turbo_frame_tag Quote.new %>
+  <div id="<%= dom_id(Quote.new) %>"></div>
 
-  <%= turbo_frame_tag "quotes" do %>
+  <div id="quotes" up-poll up-source="/quotes">
     <%= render "no_quotes" %>
     <%= render @quotes %>
-  <% end %>
+  </div>
 </main>
