@@ -265,3 +265,8 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+unpoly@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/unpoly/-/unpoly-2.5.2.tgz#a213b0e089852810c3ca6f1cc712ef7d7bb2c792"
+  integrity sha512-s1UWKib8F4RWLpSWDyMDVZGInAsGEaGjzEJyG4XvWlUVsFLJumNW32h7wpUZwYJRf/7CKYoaHXFG3bcpnlOShQ==
